@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+nav ul li{
+    padding: 0 12px;
+    
+}
+.brand img{
+    width: 250px;
+    padding: 0 6px;
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Styles for screens larger than 768px */
+    .container {
+        width: 70%; /* Keep the container width */
+    }
+
+    .bb {
+        height: 300px;
+        width: 300px;
+        margin-left: 33vh;
+        margin-top: 15vh;
+    }
+}
+
+.container{
+    min-height: 55vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 5px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 30px;
+   background-image: url('bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.bb {
+    
+    height: 300px;
+    width: 300px;
+    margin-left: 33vh;
+    margin-top: 15vh;
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 0 40px rgb(255, 255, 255); /* Circular box shadow */
+}
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 75px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+}
+
+
+
+.icons{
+    margin-top: 5px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 30px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+/* @media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  } */
+
+  @media only screen and (max-width: 767px) {
+    /* Styles for screens up to 767px (tablet and below) */
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    .bb {
+        height: 200px; /* Decrease size for smaller screens */
+        width: 200px; /* Decrease size for smaller screens */
+        margin-left: auto; /* Center the image horizontally */
+        margin-right: auto; /* Center the image horizontally */
+        margin-top: 10vh;
+    }
+
+    nav ul {
+        height: auto; /* Adjust height for smaller screens */
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    nav ul li {
+        padding: 12px 0; /* Increase vertical spacing between menu items */
+    }
+
+    .brand img {
+        width: 200px; /* Decrease logo size for smaller screens */
+    }
+
+    .songInfo {
+        position: static; /* Remove absolute positioning */
+        text-align: center; /* Center align the song info */
+    }
+
+    .songItemContainer {
+        margin-top: 20px; /* Adjust spacing */
+    }
+}
